@@ -1,15 +1,15 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Afacad_Flux } from "next/font/google";
+import { siganaFont } from "./fonts";
 import "./globals.css";
+import NavBar from "@/components/nav-bar";
+import CanvasLoader from "@/3d/canvas-loader";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const afacadFlux = Afacad_Flux({
+  variable: "--font-afacad-flux",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+
 
 export const metadata = {
   title: "Create Next App",
@@ -20,8 +20,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${afacadFlux.variable}  ${siganaFont.variable} antialiased`}
       >
+        <NavBar />
+        <CanvasLoader />
         {children}
       </body>
     </html>
