@@ -33,7 +33,7 @@ function Kosen({ children, ...props }) {
 	return (
 		<>
 			<Image
-				url="/oficinas.jpg"
+				url="/Oficinas.jpg"
 				alt="code"
 				position={[0, 0, -2]}
 				scale={[15, 10, 1]}
